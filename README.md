@@ -1,3 +1,6 @@
+## Name:Udhayanithi M
+## Reg No:212222220054
+
 # Led-control-using-Arduino
 
 ## AIM
@@ -58,9 +61,40 @@ Emergency Signaling System </br>
 Weighing Machines </br>
 
 ## CIRCUIT DIAGRAM
+![image](https://github.com/UdhayanithiM/Led-control-using-Arduino/assets/127933352/a7b2c57c-ea70-4a1f-90e9-2bdee779d16e)
 
 ## PROGRAM
+```
+const int buttonpin=3;
+const int ledpin=13;
 
+int buttonstate=0;
+
+void setup() {
+  pinMode(ledpin,OUTPUT);
+  pinMode(buttonpin,INPUT);
+
+}
+
+void loop() {
+  buttonstate=digitalRead(buttonpin);
+  if(buttonstate==HIGH)
+  {
+    digitalWrite(ledpin,HIGH);
+  }
+  else
+  {
+    digitalWrite(ledpin,LOW);
+  }
+
+}
+```
 ## OUTPUT
+## LED OFF
+![image](https://github.com/UdhayanithiM/Led-control-using-Arduino/assets/127933352/a7b2c57c-ea70-4a1f-90e9-2bdee779d16e)
+## LED ON
+![image](https://github.com/UdhayanithiM/Led-control-using-Arduino/assets/127933352/428f1444-86d9-468f-8ea1-f451d16d8d14)
+
 
 ## RESULT
+Thus to design and implement a system for LED control using an Arduino microcontroller and a push button is successfully executed
